@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 3 - HTML Forms & Input Elements</title>
+</head>
+<body>
+
+  <!--  DAY 3: HTML FORMS & INPUT ELEMENTS -->
+  <!-- Forms collect user input like name, email, password, etc. -->
+
+  <h1>Day 3 - HTML Forms</h1>
+  <p>Forms help us take user input and send it to a server.</p>
+
+  <!-- 🔹 Form Start -->
+  <form action="#" method="post">
+
+    <!-- Text Input -->
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+    <br><br>
+
+    <!-- Email Input -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <br><br>
+
+    <!-- Password Input -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" placeholder="Enter password" required>
+    <br><br>
+
+    <!-- Number Input -->
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" min="1" max="100">
+    <br><br>
+
+    <!-- Radio Buttons -->
+    <p>Gender:</p>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label>
+    <br><br>
+
+    <!-- Checkboxes -->
+    <p>Skills:</p>
+    <input type="checkbox" id="html" name="skills" value="HTML">
+    <label for="html">HTML</label>
+    <input type="checkbox" id="css" name="skills" value="CSS">
+    <label for="css">CSS</label>
+    <input type="checkbox" id="js" name="skills" value="JS">
+    <label for="js">JavaScript</label>
+    <br><br>
+
+    <!-- Dropdown -->
+    <label for="city">Select City:</label><br>
+    <select id="city" name="city">
+      <option value="">--Select--</option>
+      <option value="Jaunpur">Jaunpur</option>
+      <option value="Varanasi">Varanasi</option>
+      <option value="Lucknow">Lucknow</option>
+    </select>
+    <br><br>
+
+    <!-- Textarea -->
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="40" placeholder="Write something..."></textarea>
+    <br><br>
+
+    <!-- File Upload -->
+    <label for="photo">Upload Photo:</label><br>
+    <input type="file" id="photo" name="photo">
+    <br><br>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit Form">
+
+  </form>
+
+  <hr>
+
+  <footer>
+    <p>© 2025 Anupam Yadav | Frontend Learning - Day 3</p>
+  </footer>
+
+  <!-- 
+   PRACTICE TASK:
+  1. Add one more input field for "Phone Number".
+  2. Add a reset button below submit.
+  3. Add <fieldset> and <legend> around your form for better grouping.
+  4. Upload this file to GitHub → folder name: day3-html-forms
+  -->
+
+</body>
+</html>
