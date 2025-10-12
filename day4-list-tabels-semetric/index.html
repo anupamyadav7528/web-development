@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 4 - HTML Lists & Tables (Complete)</title>
+</head>
+<body>
+
+  <!--  DAY 4: HTML Lists & Tables (Complete Version) -->
+  <header>
+    <h1>Day 4 - HTML Lists & Tables</h1>
+    <p>Learn how to create lists and tables in HTML with full examples.</p>
+  </header>
+
+  <main>
+    <!--  PART 1: HTML LISTS -->
+    <section>
+      <h2>HTML Lists</h2>
+
+      <!--  Unordered List (default bullets) -->
+      <h3>Unordered List</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+
+      <!--  Ordered List (numbered) -->
+      <h3>Ordered List</h3>
+      <ol>
+        <li>Frontend</li>
+        <li>Backend</li>
+        <li>Database</li>
+      </ol>
+
+      <!--  Ordered List with Type -->
+      <h3>Ordered List with Different Types</h3>
+      <ol type="A">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ol>
+      <ol type="i">
+        <li>Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+      </ol>
+
+      <!--  Start Attribute Example -->
+      <h3>Ordered List Starting from Custom Number</h3>
+      <ol start="5">
+        <li>Module 5</li>
+        <li>Module 6</li>
+      </ol>
+
+      <!--  Nested List Example -->
+      <h3>Nested List</h3>
+      <ul>
+        <li>Web Development
+          <ul>
+            <li>Frontend
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </li>
+            <li>Backend</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!--  Definition List -->
+      <h3>Definition List (dl, dt, dd)</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language - the structure of a webpage.</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets - used for styling webpages.</dd>
+      </dl>
+    </section>
+
+    <hr>
+
+    
+      <!--  Table Styling Inline -->
+      <h3>Styled Table Example (Inline CSS)</h3>
+      <table border="1" style="border-collapse: collapse; width: 70%; text-align: center;">
+        <caption>Employee Details</caption>
+        <tr style="background-color: lightgray;">
+          <th>Name</th>
+          <th>Department</th>
+          <th>Salary</th>
+        </tr>
+        <tr>
+          <td>Aman kumar</td>
+          <td>HR</td>
+          <td>₹35,000</td>
+        </tr>
+        <tr>
+          <td>Akash Yadav</td>
+          <td>Finance</td>
+          <td>₹40,000</td>
+        </tr>
+      </table>
+    </section>
+
+  </main>
+
+  
+<!--  INTRODUCTION -->
+    <section>
+      <p style="text-align:center; max-width: 80%; margin: auto;">
+        <b>Rowspan</b> and <b>Colspan</b> are table attributes used to merge cells.  
+        - <b>colspan</b> merges cells horizontally (across columns).  
+        - <b>rowspan</b> merges cells vertically (across rows).  
+      </p>
+    </section>
+
+    <hr style="width:80%;">
+
+    <!-- COLSPAN EXAMPLE -->
+    <section>
+      <h2 style="text-align:center;">Example-1- Using Colspan (Merge Columns)</h2>
+
+      <table border="1">
+        <caption>Exam Results (Using colspan)</caption>
+        <tr>
+          <th colspan="3">Student Exam Report</th> <!-- Header merged across 3 columns -->
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Subject</th>
+          <th>Marks</th>
+        </tr>
+        <tr>
+          <td>Anupam Yadav</td>
+          <td>Math</td>
+          <td>90</td>
+        </tr>
+        <tr>
+          <td>Akash Yadav</td>
+          <td>Science</td>
+          <td>88</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:right;"><b>Total Marks</b></td>
+          <td><b>178</b></td>
+        </tr>
+      </table>
+
+      <!--  Explanation:
+           → colspan="3" in first row merges 3 header cells.
+           → colspan="2" in Total row merges 2 cells (Name + Subject) into one.
+      -->
+    </section>
+
+    <hr style="width:80%;">
+
+    <!--  ROWSPAN EXAMPLE -->
+    <section>
+      <h2 style="text-align:center;">Example-2 - Using Rowspan (Merge Rows)</h2>
+
+      <table border="1">
+        <caption>Student Attendance (Using rowspan)</caption>
+        <tr>
+          <th rowspan="2">Name</th> <!-- This cell spans 2 rows vertically -->
+          <th>Month</th>
+          <th>Days Present</th>
+        </tr>
+        <tr>
+          <th>Month</th>
+          <th>Days Present</th>
+        </tr>
+        <tr>
+          <td rowspan="3">Anupam</td>
+          <td>January</td>
+          <td>25</td>
+        </tr>
+        <tr>
+          <td>February</td>
+          <td>26</td>
+        </tr>
+        <tr>
+          <td>March</td>
+          <td>27</td>
+        </tr>
+      </table>
+
+      <!--  Explanation:
+           → rowspan="3" means “Anupam” cell covers 3 rows (January, Feb, March).
+      -->
+    </section>
+
+    <hr style="width:80%;">
+
+    <!--  COMBINED EXAMPLE -->
+    <section>
+      <h2 style="text-align:center;">Example-3 - Using Both Rowspan and Colspan Together</h2>
+
+      <table border="1">
+        <caption>School Timetable (Combined)</caption>
+        <tr>
+          <th rowspan="2">Day</th>
+          <th colspan="4">Subjects</th>
+        </tr>
+        <tr>
+          <th>1st Period</th>
+          <th>2nd Period</th>
+          <th>3rd Period</th>
+          <th>4th Period</th>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>Math</td>
+          <td>Science</td>
+          <td>English</td>
+          <td>Computer</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td colspan="2">Lab (Science + Computer)</td> <!-- Merge 2 periods -->
+          <td>English</td>
+          <td>Games</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Wednesday & Thursday</td> <!-- Merge 2 rows -->
+          <td>Math</td>
+          <td>Science</td>
+          <td>English</td>
+          <td>Computer</td>
+        </tr>
+        <tr>
+          <td>Physics</td>
+          <td colspan="3">Project Work</td> <!-- Merge 3 columns -->
+        </tr>
+      </table>
+
+      <!--  Explanation:
+           → “Day” cell spans 2 rows.
+           → “Lab (Science + Computer)” spans 2 columns.
+           → “Project Work” spans 3 columns.
+      -->
+    </section>
+
+  </main>
+
+  <footer>
+    <p style="text-align:center;">© 2025 Anupam Yadav | Frontend Learning - Day 4 (Rowspan & Colspan)</p>
+  </footer>
+
+
+  <!--  PRACTICE TASKS:
+       1. Create your daily schedule using a table.
+       2. Make a shopping list using an unordered list.
+       3. Create a marksheet table using rowspan and colspan.
+       4. Try using <thead>, <tbody>, and <tfoot> in your custom table.
+  -->
+
+</body>
+</html>
