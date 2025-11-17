@@ -1,0 +1,45 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+
+/* Block demo */
+
+.block-demo {
+    display: block;
+    background: orange;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Inline demo */
+
+.inline-demo {
+    display: inline;
+    background: lightgreen;
+    padding: 5px;
+}
+
+
+/* Inline-block demo */
+
+.inline-block-demo {
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    background: lightblue;
+    margin-top: 20px;
+}
+
+
+/* Overflow demo */
+
+.overflow-box {
+    width: 300px;
+    height: 100px;
+    border: 2px solid black;
+    padding: 10px;
+    overflow: auto;
+}
